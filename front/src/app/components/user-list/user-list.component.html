@@ -1,0 +1,10 @@
+<h2>Liste des utilisateurs</h2>
+<a routerLink="/add-user">Ajouter un utilisateur</a>
+<ul>
+  <li *ngFor="let user of users">
+    {{ user.name }} {{ user.first_name }} {{ user.last_name }}
+    <a [routerLink]="['/user', user.id]">Détails</a>
+    <a [routerLink]="['/edit-user', user.id]">Modifier</a>
+    <button *ngIf="user.id !== undefined" (click)="deleteUser(user.id)">Supprimer</button>
+  </li>
+</ul>

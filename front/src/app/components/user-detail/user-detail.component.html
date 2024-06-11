@@ -1,0 +1,10 @@
+<div *ngIf="user">
+    <h2>Détails de l'utilisateur</h2>
+    <p>Nom : {{ user.name }}</p>
+    <p>Prénom : {{ user.first_name }}</p>
+    <p>Nom de famille : {{ user.last_name }}</p>
+    <p>Email : {{ user.email }}</p>
+    <a [routerLink]="['/edit-user', user.id]">Modifier</a>
+    <a routerLink="/users">Retour à la liste</a>
+  </div>
+  
